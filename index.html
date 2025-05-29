@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌟 Проекты CyberB0x</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">🌟 Мои проекты</h1>
+
+    <!-- Фильтрация -->
+    <div class="text-center mb-3">
+      <h5>Категории:</h5>
+      <div class="btn-group flex-wrap" role="group">
+        <button class="btn btn-outline-primary" onclick="filterCategory('all')">Все</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('python')">Python</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('sql')">SQL</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('django')">Django</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('telegram')">Telegram</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('image')">Image</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('extension')">Extension</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('wifi')">WiFi</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('healthcare')">Healthcare</button>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <h5>Сложность:</h5>
+      <div class="btn-group flex-wrap" role="group">
+        <button class="btn btn-outline-success" onclick="filterDifficulty('all')">Все</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('beginner')">Начальный</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('intermediate')">Средний</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('advanced')">Продвинутый</button>
+      </div>
+    </div>
+
+    <!-- Проекты -->
+    <div class="row" id="project-list">
+
+      <!-- Telegram Bot -->
+      <div class="col-md-6 mb-4 project-card python telegram beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🚀 Telegram Bot</h5>
+            <p class="card-text">Умный бот с API и кастомными функциями.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/Project_Telegram_bot" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HelpDesk -->
+      <div class="col-md-6 mb-4 project-card python sql django intermediate">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">💽 HelpDesk-system</h5>
+            <p class="card-text">Система поддержки пользователей на Django.</p>
+            <span class="badge bg-warning text-dark">Средний</span>
+            <a href="https://github.com/CyberB0x/HelpDesk-system" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SQL User Manager -->
+      <div class="col-md-6 mb-4 project-card python sql beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🧩 SQL User Manager</h5>
+            <p class="card-text">Управление пользователями с использованием MySQL.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/ArslonDev/SQL_py" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- To-Do List -->
+      <div class="col-md-6 mb-4 project-card python sql beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📔 To-Do-List-Manager</h5>
+            <p class="card-text">Управление задачами с MySQL и Python.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/To-Do-List-Manager" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MiniCRM -->
+      <div class="col-md-6 mb-4 project-card python sql intermediate">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📗 MiniCRM</h5>
+            <p class="card-text">Управление клиентами и задачами.</p>
+            <span class="badge bg-warning text-dark">Средний</span>
+            <a href="https://github.com/CyberB0x/Mini-CRM/tree/projects" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TextExtractor -->
+      <div class="col-md-6 mb-4 project-card python image beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🖼️ TextExtractor</h5>
+            <p class="card-text">Извлечение текста из изображений (OCR).</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/TextExtractor" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Converter IMG to JPG -->
+      <div class="col-md-6 mb-4 project-card python image beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🖼️ Converter IMG to JPG</h5>
+            <p class="card-text">Конвертер изображений с Flask + PIL.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/IMG_convertor" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Uploader -->
+      <div class="col-md-6 mb-4 project-card python image intermediate">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🖼️ Image Uploader</h5>
+            <p class="card-text">Интерфейс загрузки изображений с Flask + Docker.</p>
+            <span class="badge bg-warning text-dark">Средний</span>
+            <a href="https://github.com/CyberB0x/Project_Image_Uploader" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AdBlocker -->
+      <div class="col-md-6 mb-4 project-card extension beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🚫 My AdBlocker</h5>
+            <p class="card-text">Расширение Chrome на Manifest V3.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/AdBlocker_Lite" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wi-Fi Scanner -->
+      <div class="col-md-6 mb-4 project-card wifi python beginner">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📶 Wi-Fi Scanner на Python</h5>
+            <p class="card-text">Сканер Wi-Fi сетей с pywifi.</p>
+            <span class="badge bg-success">Начальный</span>
+            <a href="https://github.com/CyberB0x/Scanner_Wifi_py" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prescriptions -->
+      <div class="col-md-6 mb-4 project-card healthcare advanced">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📑 Prescriptions</h5>
+            <p class="card-text">Медицинские рецепты в PDF.</p>
+            <span class="badge bg-danger">Продвинутый</span>
+            <a href="https://github.com/CyberB0x/Prescriptions" class="btn btn-primary mt-2">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
