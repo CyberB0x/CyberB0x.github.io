@@ -5,32 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>🌟 Проекты CyberB0x</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .btn-outline-primary {
+      border-color: #306998;
+      color: #306998;
+    }
+    .btn-outline-primary:hover {
+      background-color: #306998;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #306998;
+      border-color: #306998;
+    }
+    .btn-primary:hover {
+      background-color: #1e4976;
+      border-color: #1e4976;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .badge {
+      font-size: 0.8em;
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
 
   <div class="container py-5">
-    <h1 class="text-center mb-4">🌟 Мои проекты</h1>
+    <h1 class="text-center mb-4">💻 Python Full Stack проекты</h1>
 
-    <!-- Фильтрация -->
     <div class="text-center mb-3">
-      <h5>Категории:</h5>
+      <h5>📂 Категории:</h5>
       <div class="btn-group flex-wrap" role="group">
         <button class="btn btn-outline-primary" onclick="filterCategory('all')">Все</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('security')">Security</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('python')">Python</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('sql')">SQL</button>
         <button class="btn btn-outline-primary" onclick="filterCategory('django')">Django</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('telegram')">Telegram</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('image')">Image</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('extension')">Extension</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('wifi')">WiFi</button>
-        <button class="btn btn-outline-primary" onclick="filterCategory('healthcare')">Healthcare</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('flask')">Flask</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('sql')">SQL</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('security')">Security</button>
       </div>
     </div>
 
     <div class="text-center mb-4">
-      <h5>Сложность:</h5>
+      <h5>🚦 Сложность:</h5>
       <div class="btn-group flex-wrap" role="group">
         <button class="btn btn-outline-success" onclick="filterDifficulty('all')">Все</button>
         <button class="btn btn-outline-success" onclick="filterDifficulty('beginner')">Начальный</button>
@@ -39,205 +68,59 @@
       </div>
     </div>
 
-    <!-- Проекты -->
     <div class="row" id="project-list">
 
-      <!-- Telegram Bot -->
-      <div class="col-md-6 mb-4 project-card python telegram beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🚀 Telegram Bot</h5>
-            <p class="card-text">Умный бот с API и кастомными функциями.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/Project_Telegram_bot" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- HelpDesk -->
-      <div class="col-md-6 mb-4 project-card python sql django intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">💽 HelpDesk-system</h5>
-            <p class="card-text">Система поддержки пользователей на Django.</p>
-            <span class="badge bg-warning text-dark">Средний</span>
-            <a href="https://github.com/CyberB0x/HelpDesk-system" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SQL User Manager -->
-      <div class="col-md-6 mb-4 project-card python sql beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🧩 SQL User Manager</h5>
-            <p class="card-text">Управление пользователями с использованием MySQL.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/ArslonDev/SQL_py" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- To-Do List -->
-      <div class="col-md-6 mb-4 project-card python sql beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📔 To-Do-List-Manager</h5>
-            <p class="card-text">Управление задачами с MySQL и Python.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/To-Do-List-Manager" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- MiniCRM -->
-      <div class="col-md-6 mb-4 project-card python sql intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📗 MiniCRM</h5>
-            <p class="card-text">Управление клиентами и задачами.</p>
-            <span class="badge bg-warning text-dark">Средний</span>
-            <a href="https://github.com/CyberB0x/Mini-CRM/tree/projects" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- TextExtractor -->
-      <div class="col-md-6 mb-4 project-card python image beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ TextExtractor</h5>
-            <p class="card-text">Извлечение текста из изображений (OCR).</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/TextExtractor" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Converter IMG to JPG -->
-      <div class="col-md-6 mb-4 project-card python image beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ Converter IMG to JPG</h5>
-            <p class="card-text">Конвертер изображений с Flask + PIL.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/IMG_convertor" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image Uploader -->
-      <div class="col-md-6 mb-4 project-card python image intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ Image Uploader</h5>
-            <p class="card-text">Интерфейс загрузки изображений с Flask + Docker.</p>
-            <span class="badge bg-warning text-dark">Средний</span>
-            <a href="https://github.com/CyberB0x/Project_Image_Uploader" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- AdBlocker -->
-      <div class="col-md-6 mb-4 project-card extension beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🚫 My AdBlocker</h5>
-            <p class="card-text">Расширение Chrome на Manifest V3.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/AdBlocker_Lite" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Wi-Fi Scanner -->
-      <div class="col-md-6 mb-4 project-card wifi python beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📶 Wi-Fi Scanner на Python</h5>
-            <p class="card-text">Сканер Wi-Fi сетей с pywifi.</p>
-            <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/Scanner_Wifi_py" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prescriptions -->
-      <div class="col-md-6 mb-4 project-card healthcare advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📑 Prescriptions</h5>
-            <p class="card-text">Медицинские рецепты в PDF.</p>
-            <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/Prescriptions" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ThreatLens -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
+      <div class="col-md-6 mb-4 project-card django security advanced" data-aos="fade-up">
         <div class="card shadow-sm">
           <div class="card-body">
             <h5 class="card-title">🛡️ ThreatLens</h5>
-            <p class="card-text">Это веб-приложение на Django для анализа файлов и URL с использованием.</p>
+            <p class="card-text">Веб-приложение на Django для анализа файлов и URL.</p>
             <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/ThreatLens/tree/projects" class="btn btn-primary mt-2">GitHub →</a>
+            <div class="mt-2">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="20">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="20">
+            </div>
+            <a href="https://github.com/CyberB0x/ThreatLens" class="btn btn-primary mt-2">GitHub →</a>
           </div>
         </div>
       </div>
 
-       <!-- Webscanner -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🔍 Webscanner</h5>
-            <p class="card-text">Web Security Scanner — это Django-приложение, позволяющее выполнять базовую проверку безопасности веб-сайтов на наличие SQL-инъекций.</p>
-            <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/Webscanner" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
+      <!-- Добавь остальные проекты аналогично -->
 
-       <!-- SNIPE -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🔍 SNIPE(Scan Network)</h5>
-            <p class="card-text">Это веб-приложение на Django для сканирования локальной сети, определения IP-адресов, MAC-адресов, открытых портов, операционных систем и баннеров сервисов.</p>
-            <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/Webscanner" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
+    </div>
 
-       <!-- OSINT Platform -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🕵️ OSINT Platform</h5>
-            <p class="card-text">OSINT Platform — это централизованная веб-система для автоматизированного сбора информации из открытых источников (OSINT). </p>
-            <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/OSINT-Platform" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- DevLog -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🧠 DevLog</h5>
-            <p class="card-text">DevLog — Developer Blog Platform (Django + Bootstrap) </p>
-            <span class="badge bg-danger">Продвинутый</span>
-            <a href="https://github.com/CyberB0x/Devlog" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
+    <div class="text-center mt-5">
+      <h5>📊 GitHub Статистика</h5>
+      <img src="https://github-readme-stats.vercel.app/api?username=CyberB0x&show_icons=true&theme=radical" class="img-fluid mb-3">
+      <img src="https://github-readme-streak-stats.herokuapp.com?user=CyberB0x&theme=radical" class="img-fluid">
     </div>
   </div>
 
-  <script src="script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function filterCategory(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    function filterDifficulty(level) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (level === 'all' || card.classList.contains(level)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
