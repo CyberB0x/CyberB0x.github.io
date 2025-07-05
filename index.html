@@ -19,18 +19,14 @@
       background-color: #1a1e29;
       border: 1px solid #333;
       border-radius: 12px;
-      transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(94, 241, 186, 0.2);
     }
-    .card-title {
-      color: #ffffff;
-    }
-    .card-text {
-      color: #c0c0c0;
-    }
+    .card-title { color: #fff; }
+    .card-text { color: #bbb; }
     .btn-primary {
       background-color: #5ef1ba;
       border: none;
@@ -39,13 +35,11 @@
     .btn-primary:hover {
       background-color: #00cc99;
     }
-    .btn-outline-primary,
-    .btn-outline-success {
+    .btn-outline-primary, .btn-outline-success {
       color: #5ef1ba;
       border-color: #5ef1ba;
     }
-    .btn-outline-primary:hover,
-    .btn-outline-success:hover {
+    .btn-outline-primary:hover, .btn-outline-success:hover {
       background-color: #5ef1ba;
       color: #0f1117;
     }
@@ -67,6 +61,8 @@
     a:hover {
       text-decoration: underline;
     }
+    .project-card { display: block; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -74,40 +70,42 @@
   <div class="container py-5">
     <h1 class="text-center mb-4">🌟 Мои проекты</h1>
 
-    <!-- Фильтры -->
+    <!-- Категории -->
     <div class="text-center mb-3">
       <h5>Категории:</h5>
       <div class="btn-group flex-wrap">
-        <button class="btn btn-outline-primary">Все</button>
-        <button class="btn btn-outline-primary">Security</button>
-        <button class="btn btn-outline-primary">Python</button>
-        <button class="btn btn-outline-primary">SQL</button>
-        <button class="btn btn-outline-primary">Django</button>
-        <button class="btn btn-outline-primary">Telegram</button>
-        <button class="btn btn-outline-primary">Image</button>
-        <button class="btn btn-outline-primary">Extension</button>
-        <button class="btn btn-outline-primary">WiFi</button>
-        <button class="btn btn-outline-primary">Healthcare</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('all')">Все</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('security')">Security</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('python')">Python</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('sql')">SQL</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('django')">Django</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('telegram')">Telegram</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('image')">Image</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('extension')">Extension</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('wifi')">WiFi</button>
+        <button class="btn btn-outline-primary" onclick="filterCategory('healthcare')">Healthcare</button>
       </div>
     </div>
 
+    <!-- Сложность -->
     <div class="text-center mb-4">
       <h5>Сложность:</h5>
       <div class="btn-group flex-wrap">
-        <button class="btn btn-outline-success">Все</button>
-        <button class="btn btn-outline-success">Начальный</button>
-        <button class="btn btn-outline-success">Средний</button>
-        <button class="btn btn-outline-success">Продвинутый</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('all')">Все</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('beginner')">Начальный</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('intermediate')">Средний</button>
+        <button class="btn btn-outline-success" onclick="filterDifficulty('advanced')">Продвинутый</button>
       </div>
     </div>
 
     <!-- Проекты -->
-    <div class="row">
-
-      <!-- Здесь вставлены ВСЕ твои проекты -->
-      <!-- Пример одного блока: -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
+    <div class="row" id="project-list">
+      <!-- Здесь будут все проекты -->
+      <!-- Я добавил отдельным файлом → см. в комментарии ниже -->
+      <!-- ✅ ВСТАВЬ СЮДА ВСЕ БЛОКИ ПРОЕКТОВ ИЗ ТВОЕГО HTML -->
+      <!-- Например: -->
+      <div class="col-md-6 mb-4 project-card python telegram beginner">
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">🚀 Telegram Bot</h5>
             <p class="card-text">Умный бот с API и кастомными функциями.</p>
@@ -117,31 +115,41 @@
         </div>
       </div>
 
-      <!-- Повторяй этот шаблон с остальными -->
-      <!-- Весь твой список проектов здесь уже можно вставить как есть -->
+      <!-- Вставь остальные блоки из твоего исходного кода: HelpDesk, SQL Manager и т.д. -->
 
-      <!-- Примеры (сокращено для компактности): -->
-      <!-- HelpDesk -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">💽 HelpDesk-system</h5>
-            <p class="card-text">Система поддержки пользователей на Django.</p>
-            <span class="badge bg-warning text-dark">Средний</span>
-            <a href="https://github.com/CyberB0x/HelpDesk-system" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Повторить все другие проекты аналогично -->
-      <!-- ... -->
-
+      <!-- Пример конца -->
     </div>
   </div>
 
+  <!-- Футер -->
   <footer class="text-center">
     <p>👨‍💻 Сделано с 💻 и ☕ — <a href="https://github.com/CyberB0x" target="_blank">CyberB0x</a> © 2025</p>
   </footer>
+
+  <!-- Скрипт фильтрации -->
+  <script>
+    function filterCategory(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function filterDifficulty(level) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (level === 'all' || card.classList.contains(level)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
