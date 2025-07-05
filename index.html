@@ -3,92 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🌟 Проекты CyberB0x</title>
+  <title>Проекты CyberB0x</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #0f1117;
-      color: #d3d3d3;
+      background-color: #1c1f26;
+      color: #e0e0e0;
       font-family: 'Fira Code', monospace;
     }
     h1, h5 {
       color: #5ef1ba;
     }
-    .card {
-      background-color: #1a1e29;
-      border: 1px solid #333;
-      border-radius: 12px;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    .nav-pills .nav-link {
+      color: #5ef1ba;
+      border: 1px solid #5ef1ba;
+      margin: 2px;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(94, 241, 186, 0.2);
-    }
-    .card-title { color: #fff; }
-    .card-text { color: #bbb; }
-    .btn-primary {
+    .nav-pills .nav-link.active {
       background-color: #5ef1ba;
-      border: none;
-      color: #0f1117;
+      color: #1c1f26;
     }
-    .btn-primary:hover {
-      background-color: #00cc99;
-    }
-    .btn-outline-primary, .btn-outline-success {
+    .btn-outline-success {
       color: #5ef1ba;
       border-color: #5ef1ba;
     }
-    .btn-outline-primary:hover, .btn-outline-success:hover {
+    .btn-outline-success:hover {
       background-color: #5ef1ba;
-      color: #0f1117;
+      color: #1c1f26;
+    }
+    .card {
+      background-color: #2a2e38;
+      border: 1px solid #444;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(94, 241, 186, 0.1);
+    }
+    .card-title { color: #ffffff; }
+    .card-text { color: #cccccc; }
+    .btn-primary {
+      background-color: #5ef1ba;
+      border: none;
+      color: #1c1f26;
+    }
+    .btn-primary:hover {
+      background-color: #00cc99;
     }
     .badge {
       font-size: 0.8rem;
       padding: 6px 10px;
       border-radius: 10px;
     }
-    .category-icons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-    .category-icons img {
-      width: 48px;
-      height: 48px;
-      filter: brightness(0) saturate(100%) invert(87%) sepia(61%) saturate(303%) hue-rotate(85deg) brightness(104%) contrast(97%);
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .category-icons img:hover {
-      transform: scale(1.2);
-    }
   </style>
 </head>
 <body>
 
   <div class="container py-5">
-    <h1 class="text-center mb-4">🌟 Мои проекты</h1>
+    <h1 class="text-center mb-5">Проекты CyberB0x</h1>
 
-    <!-- Иконки категорий -->
-    <div class="category-icons">
-      <img src="img/all.png" alt="Все" onclick="filterCategory('all')" title="Все">
-      <img src="img/python.png" alt="Python" onclick="filterCategory('python')" title="Python">
-      <img src="img/sql.png" alt="SQL" onclick="filterCategory('sql')" title="SQL">
-      <img src="img/django.png" alt="Django" onclick="filterCategory('django')" title="Django">
-      <img src="img/telegram.png" alt="Telegram" onclick="filterCategory('telegram')" title="Telegram">
-      <img src="img/security.png" alt="Security" onclick="filterCategory('security')" title="Security">
-      <img src="img/image.png" alt="Image" onclick="filterCategory('image')" title="Image">
-      <img src="img/extension.png" alt="Extension" onclick="filterCategory('extension')" title="Extension">
-      <img src="img/wifi.png" alt="WiFi" onclick="filterCategory('wifi')" title="WiFi">
-      <img src="img/healthcare.png" alt="Healthcare" onclick="filterCategory('healthcare')" title="Healthcare">
-    </div>
+    <!-- Меню категорий -->
+    <ul class="nav nav-pills justify-content-center flex-wrap mb-4" id="categoryMenu">
+      <li class="nav-item"><a class="nav-link active" onclick="filterCategory('all')">Все</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('python')">Python</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('django')">Django</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('sql')">SQL</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('security')">Security</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('telegram')">Telegram</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('image')">Image</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('extension')">Extension</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('wifi')">WiFi</a></li>
+      <li class="nav-item"><a class="nav-link" onclick="filterCategory('healthcare')">Healthcare</a></li>
+    </ul>
 
-    <!-- Кнопки сложности -->
-    <div class="text-center mb-4">
+    <!-- Меню сложности -->
+    <div class="text-center mb-5">
       <h5>Сложность:</h5>
-      <div class="btn-group flex-wrap" role="group">
+      <div class="btn-group flex-wrap">
         <button class="btn btn-outline-success" onclick="filterDifficulty('all')">Все</button>
         <button class="btn btn-outline-success" onclick="filterDifficulty('beginner')">Начальный</button>
         <button class="btn btn-outline-success" onclick="filterDifficulty('intermediate')">Средний</button>
@@ -98,29 +90,36 @@
 
     <!-- Список проектов -->
     <div class="row" id="project-list">
-      <!-- Здесь будут все ваши project-card, как вы уже их написали -->
-      <!-- Например: -->
+      <!-- Сюда вставляются карточки проектов (используй свой HTML-фрагмент с карточками) -->
+      <!-- Пример одной карточки ниже: -->
+
       <div class="col-md-6 mb-4 project-card python beginner">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">🐍 Python Starter</h5>
-            <p class="card-text">Проект для начала работы с Python.</p>
+            <h5 class="card-title">Telegram Bot</h5>
+            <p class="card-text">Умный бот с API и кастомными функциями.</p>
             <span class="badge bg-success">Начальный</span>
-            <a href="https://github.com/CyberB0x/ExamplePython" class="btn btn-primary mt-2">GitHub →</a>
+            <a href="https://github.com/CyberB0x/Project_Telegram_bot" class="btn btn-primary mt-2">GitHub →</a>
           </div>
         </div>
       </div>
-      <!-- Остальные проекты вы уже вставляли — просто копируйте их сюда -->
+
+      <!-- Добавь сюда остальные карточки из предыдущего шаблона -->
     </div>
   </div>
 
-  <!-- Скрипт фильтрации (должен быть подключен отдельно или добавлен здесь) -->
   <script>
     function filterCategory(category) {
       const cards = document.querySelectorAll('.project-card');
       cards.forEach(card => {
         card.style.display = (category === 'all' || card.classList.contains(category)) ? 'block' : 'none';
       });
+
+      // Активный класс в меню
+      document.querySelectorAll('#categoryMenu .nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+      event.target.classList.add('active');
     }
 
     function filterDifficulty(level) {
