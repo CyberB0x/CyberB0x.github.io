@@ -1,6 +1,116 @@
-.card {
-  border-radius: 16px;
-}
-.btn {
-  margin: 4px;
-}
+:root {
+      --main-color: #007bff;
+      --light-bg: #fdfdfd;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --transition-fast: 0.2s ease;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      font-family: "Segoe UI", sans-serif;
+      color: #333;
+      padding-bottom: 60px;
+    }
+
+    h1 {
+      font-weight: 600;
+      color: var(--main-color);
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .nav-categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+
+    .nav-categories .nav-link {
+      padding: 8px 16px;
+      border-radius: 30px;
+      border: 1px solid transparent;
+      color: var(--main-color);
+      background-color: #e9f2ff;
+      transition: var(--transition-fast);
+    }
+
+    .nav-categories .nav-link.active,
+    .nav-categories .nav-link:hover {
+      background-color: var(--main-color);
+      color: white;
+    }
+
+    .difficulty-filters {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .difficulty-filters .btn {
+      margin: 5px;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .difficulty-filters .btn.active {
+      background-color: var(--main-color);
+      color: white;
+      border-color: var(--main-color);
+    }
+
+    .project-card .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--main-color);
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 30px;
+      background-color: #dee2e6;
+      color: #333;
+      margin-top: 5px;
+      display: inline-block;
+    }
+
+    .bg-dark.text-white {
+      color: white !important;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 576px) {
+      .card-title {
+        font-size: 1rem;
+      }
+      .card-text {
+        font-size: 0.9rem;
+      }
+    }
