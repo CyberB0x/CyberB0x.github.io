@@ -3,312 +3,672 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberB0x Projects</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet">
+  <title>CyberB0x Projects • Store</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN (версии 6+) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-ZxcP0...etc" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50:  '#eef4ff',
+              100: '#dce7ff',
+              500: '#6366f1',
+              600: '#5558ee',
+              700: '#4f46e5'
+            }
+          },
+          boxShadow: {
+            card: '0 6px 30px -10px rgba(2,6,23,.15)'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">CyberB0x</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#" id="navAll">All Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="navBuy">Buy Project</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-
-    <h1>My Projects</h1>
-
-    <!-- Category Menu -->
-    <nav class="nav nav-categories" id="categoryMenu">
-      <a class="nav-link active" href="#" data-category="all">All</a>
-      <a class="nav-link" href="#" data-category="python">Python</a>
-      <a class="nav-link" href="#" data-category="django">Django</a>
-      <a class="nav-link" href="#" data-category="sql">SQL</a>
-      <a class="nav-link" href="#" data-category="security">Security</a>
-      <a class="nav-link" href="#" data-category="telegram">Telegram</a>
-      <a class="nav-link" href="#" data-category="image">Images</a>
-      <a class="nav-link" href="#" data-category="extension">Extensions</a>
-      <a class="nav-link" href="#" data-category="wifi">WiFi</a>
-      <a class="nav-link" href="#" data-category="healthcare">Healthcare</a>
-    </nav>
-
-    <!-- Difficulty Filter -->
-    <div class="difficulty-filters">
-      <button type="button" class="btn btn-outline-primary active" data-difficulty="all">All</button>
-      <button type="button" class="btn btn-outline-success" data-difficulty="beginner">Beginner</button>
-      <button type="button" class="btn btn-outline-warning" data-difficulty="intermediate">Intermediate</button>
-      <button type="button" class="btn btn-outline-danger" data-difficulty="advanced">Advanced</button>
-      <button type="button" class="btn btn-outline-dark" data-difficulty="expert">Expert</button>
-      <button type="button" class="btn btn-outline-info" data-difficulty="premium">Premium</button>
-    </div>
-
-    <!-- Projects -->
-    <div class="row" id="project-list">
-      <!-- Telegram Bot -->
-      <div class="col-md-6 mb-4 project-card python telegram beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🚀 Telegram Bot</h5>
-            <p class="card-text">Smart bot with API and custom features.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/Project_Telegram_bot" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- HelpDesk -->
-      <div class="col-md-6 mb-4 project-card python sql django intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">💽 HelpDesk-system</h5>
-            <p class="card-text">User support system on Django.</p>
-            <span class="badge bg-warning text-white">Intermediate</span>
-            <a href="https://github.com/CyberB0x/HelpDesk-system" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SQL User Manager -->
-      <div class="col-md-6 mb-4 project-card python sql beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🧩 SQL User Manager</h5>
-            <p class="card-text">User management with MySQL.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/ArslonDev/SQL_py" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- To-Do List -->
-      <div class="col-md-6 mb-4 project-card python sql beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📔 To-Do-List-Manager</h5>
-            <p class="card-text">Task management with MySQL and Python.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/To-Do-List-Manager" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- MiniCRM -->
-      <div class="col-md-6 mb-4 project-card python sql intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📗 MiniCRM</h5>
-            <p class="card-text">Client and task management.</p>
-            <span class="badge bg-warning text-white">Intermediate</span>
-            <a href="https://github.com/CyberB0x/Mini-CRM/tree/projects" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- TextExtractor -->
-      <div class="col-md-6 mb-4 project-card python image beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ TextExtractor</h5>
-            <p class="card-text">Text extraction from images (OCR).</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/TextExtractor" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- TextExtractor -->
-      <div class="col-md-6 mb-4 project-card python image beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🔣 QR Code Generator from Text/Links</h5>
-            <p class="card-text">A simple Flask web service that generates QR codes from text or URLs. The interface is built with Bootstrap 5.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/QR_Code" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-      
-
-      <!-- Converter IMG to JPG -->
-      <div class="col-md-6 mb-4 project-card python image beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ Converter IMG to JPG</h5>
-            <p class="card-text">Image converter with Flask + PIL.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/IMG_convertor" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image Uploader -->
-      <div class="col-md-6 mb-4 project-card python image intermediate">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🖼️ Image Uploader</h5>
-            <p class="card-text">Image upload interface with Flask + Docker.</p>
-            <span class="badge bg-warning text-white">Intermediate</span>
-            <a href="https://github.com/CyberB0x/Project_Image_Uploader" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- AdBlocker -->
-      <div class="col-md-6 mb-4 project-card extension beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🚫 My AdBlocker</h5>
-            <p class="card-text">Chrome extension on Manifest V3.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/AdBlocker_Lite" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Wi-Fi Scanner -->
-      <div class="col-md-6 mb-4 project-card wifi python beginner">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📶 Wi-Fi Scanner in Python</h5>
-            <p class="card-text">Wi-Fi network scanner with pywifi.</p>
-            <span class="badge bg-success text-white">Beginner</span>
-            <a href="https://github.com/CyberB0x/Scanner_Wifi_py" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Prescriptions -->
-      <div class="col-md-6 mb-4 project-card healthcare advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📑 Prescriptions</h5>
-            <p class="card-text">Medical prescriptions in PDF.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/Prescriptions" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ThreatLens -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🛡️ ThreatLens</h5>
-            <p class="card-text">File and URL analysis on Django.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/ThreatLens/tree/projects" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Webscanner -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🔍 Webscanner</h5>
-            <p class="card-text">Website check for SQL injections.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/Webscanner" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SNIPE -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🔍 SNIPE(Scan Network)</h5>
-            <p class="card-text">Network scanning and open port detection.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/Webscanner" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- OSINT Platform -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🕵️ OSINT Platform</h5>
-            <p class="card-text">Centralized OSINT information collection.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/OSINT-Platform" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- DevLog -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🧠 DevLog</h5>
-            <p class="card-text">Developer Blog Platform on Django.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/Devlog" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-
-       <!-- SNIPE -->
-      <div class="col-md-6 mb-4 project-card django security advanced">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">🛡️ Phishing URL Analyzer</h5>
-            <p class="card-text">It's a lightweight, web-based tool that detects potentially dangerous or phishing links.</p>
-            <span class="badge bg-danger text-white">Advanced</span>
-            <a href="https://github.com/CyberB0x/Phishing_url_analyzer" class="btn btn-primary mt-2">GitHub →</a>
-            <a href="https://phishing-url-analyzer.onrender.com/" class="btn btn-primary mt-2">Try the live →</a>
-          </div>
-        </div>
-      </div>
-      
-
-      <!-- SafeSend -->
-      <div class="col-md-6 mb-4 project-card django security expert premium">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📦 SafeSend</h5>
-            <p class="card-text">Secure one-time file transfer.</p>
-            <span class="badge bg-dark text-white">Expert</span>
-            <a href="https://github.com/CyberB0x/SafeSend" class="btn btn-primary mt-2">GitHub →</a>
-          </div>
-        </div>
+  <!-- Top bar -->
+  <header class="bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white sticky top-0 z-50 shadow-lg/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600/20 ring-1 ring-white/10">
+            <i class="fa-solid fa-paw"></i>
+          </span>
+          <span class="text-xl font-bold tracking-tight">CyberB0x</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#catalog" id="navAll" class="hover:text-brand-100/90">All Projects</a>
+          <a href="#catalog" id="navBuy" class="hover:text-brand-100/90">Buy Project</a>
+          <a href="https://github.com/CyberB0x" target="_blank" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/15 ring-1 ring-white/10">GitHub</a>
+        </nav>
       </div>
     </div>
 
-    <!-- OneTimeLink -->
-      <div class="col-md-6 mb-4 project-card django security expert premium">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">📦 OneTimeLink</h5>
-            <p class="card-text">Secure File & Message Sharing.</p>
-            <span class="badge bg-dark text-white">Expert</span>
-            <a href="https://arslonbekefsun.gumroad.com/l/fwulq" class="btn btn-primary mt-2">Buy this →</a>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute -top-32 -left-24 h-64 w-64 rounded-full bg-brand-600/30 blur-3xl"></div>
+      <div class="absolute -bottom-32 -right-24 h-64 w-64 rounded-full bg-indigo-500/30 blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+              Modern <span class="text-brand-100">Project Store</span> for Python & Django
+            </h1>
+            <p class="mt-4 text-white/80">
+              Ready-to-use apps, bots, utilities, and security tools. Explore by category, difficulty, or search by name.
+            </p>
+          </div>
+          <div class="md:justify-self-end">
+            <!-- Search -->
+            <div class="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 rounded-2xl p-3 sm:p-4 shadow-card ring-1 ring-black/5">
+              <div class="flex items-center gap-3">
+                <span class="text-xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input id="searchInput" type="text" placeholder="Search projects..."
+                       class="w-full bg-transparent outline-none text-gray-900 placeholder-gray-400">
+                <button id="clearSearch" class="text-sm px-3 py-1.5 rounded-lg bg-gray-100 text-gray-700
+                                hover:bg-red-200 hover:text-black transition duration-150">
+                  Clear
+                </button>
+              </div>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700 ring-1 ring-brand-100">Python</span>
+                <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 ring-1 ring-blue-100">Django</span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 ring-1 ring-emerald-100">Beginner</span>
+                <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 ring-1 ring-amber-100">Intermediate</span>
+                <span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 ring-1 ring-rose-100">Advanced</span>
+                <span class="px-2.5 py-1 rounded-full bg-gray-100 text-gray-800 ring-1 ring-gray-200">Expert</span>
+                <span class="px-2.5 py-1 rounded-full bg-teal-50 text-teal-700 ring-1 ring-teal-100">Premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="mt-8 sm:mt-10">
+          <!-- Categories -->
+          <div class="flex flex-wrap items-center gap-2" id="categoryMenu">
+            <button class="chip chip--active" data-category="all">All</button>
+            <button class="chip" data-category="python">Python</button>
+            <button class="chip" data-category="django">Django</button>
+            <button class="chip" data-category="sql">SQL</button>
+            <button class="chip" data-category="security">Security</button>
+            <button class="chip" data-category="telegram">Telegram</button>
+            <button class="chip" data-category="image">Images</button>
+            <button class="chip" data-category="extension">Extensions</button>
+            <button class="chip" data-category="wifi">WiFi</button>
+            <button class="chip" data-category="healthcare">Healthcare</button>
+          </div>
+
+          <!-- Difficulty -->
+          <div class="mt-4 flex flex-wrap items-center gap-2" id="difficultyMenu">
+            <button class="chip chip--blue chip--active" data-difficulty="all">All</button>
+            <button class="chip chip--green" data-difficulty="beginner">Beginner</button>
+            <button class="chip chip--amber" data-difficulty="intermediate">Intermediate</button>
+            <button class="chip chip--rose" data-difficulty="advanced">Advanced</button>
+            <button class="chip chip--gray" data-difficulty="expert">Expert</button>
+            <button class="chip chip--teal" data-difficulty="premium">Premium</button>
           </div>
         </div>
       </div>
+    </section>
+  </header>
+
+  <!-- Catalog -->
+  <main id="catalog" class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="project-list">
+
+        <!-- Telegram Bot -->
+        <article class="card project-card python telegram beginner" data-title="Telegram Bot" data-desc="Smart bot with API and custom features.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-robot"></i>Telegram Bot
+          </h3>
+          <p class="card__desc">Smart bot with API and custom features.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Project_Telegram_bot" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- HelpDesk-system -->
+        <article class="card project-card python sql django intermediate" data-title="HelpDesk-system" data-desc="User support system on Django.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-handshake-angle"></i> HelpDesk-system
+          </h3>
+          <p class="card__desc">User support system on Django.</p>
+          <div class="card__badges">
+            <span class="badge badge--amber">Intermediate</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/HelpDesk-system" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- SQL User Manager -->
+        <article class="card project-card python sql beginner" data-title="SQL User Manager" data-desc="User management with MySQL.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-database"></i> SQL User Manager
+          </h3>
+          <p class="card__desc">User management with MySQL.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+        <div class="card__actions">
+            <a href="https://github.com/ArslonDev/SQL_py" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- To-Do-List-Manager -->
+        <article class="card project-card python sql beginner" data-title="To-Do-List-Manager" data-desc="Task management with MySQL and Python.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-clipboard-list"></i> To-Do-List-Manager
+          </h3>
+          <p class="card__desc">Task management with MySQL and Python.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/To-Do-List-Manager" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- MiniCRM -->
+        <article class="card project-card python sql intermediate" data-title="MiniCRM" data-desc="Client and task management.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-headset"></i> MiniCRM
+          </h3>
+          <p class="card__desc">Client and task management.</p>
+          <div class="card__badges">
+            <span class="badge badge--amber">Intermediate</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Mini-CRM/tree/projects" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- TextExtractor -->
+        <article class="card project-card python image beginner" data-title="TextExtractor" data-desc="Text extraction from images (OCR).">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-images"></i> TextExtractor
+          </h3>
+          <p class="card__desc">Text extraction from images (OCR).</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/TextExtractor" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- QR Code Generator from Text/Links -->
+        <article class="card project-card python image beginner" data-title="QR Code Generator" data-desc="Flask web service that generates QR codes from text or URLs.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-qrcode"></i> QR Code Generator from Text/Links
+          </h3>
+          <p class="card__desc">A simple Flask web service that generates QR codes from text or URLs.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/QR_Code" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Converter IMG to JPG -->
+        <article class="card project-card python image beginner" data-title="Converter IMG to JPG" data-desc="Image converter with Flask + PIL.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-camera-rotate"></i> Converter IMG to JPG
+          </h3>
+          <p class="card__desc">Image converter with Flask + PIL.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/IMG_convertor" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Image Uploader -->
+        <article class="card project-card python image intermediate" data-title="Image Uploader" data-desc="Image upload interface with Flask + Docker.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-camera"></i> Image Uploader
+          </h3>
+          <p class="card__desc">Image upload interface with Flask + Docker.</p>
+          <div class="card__badges">
+            <span class="badge badge--amber">Intermediate</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Project_Image_Uploader" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- My AdBlocker -->
+        <article class="card project-card extension beginner" data-title="My AdBlocker" data-desc="Chrome extension on Manifest V3.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-ban"></i> My AdBlocker
+          </h3>
+          <p class="card__desc">Chrome extension on Manifest V3.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/AdBlocker_Lite" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Wi-Fi Scanner in Python -->
+        <article class="card project-card wifi python beginner" data-title="Wi-Fi Scanner in Python" data-desc="Wi-Fi network scanner with pywifi.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-wifi"></i> Wi-Fi Scanner in Python
+          </h3>
+          <p class="card__desc">Wi-Fi network scanner with pywifi.</p>
+          <div class="card__badges">
+            <span class="badge badge--green">Beginner</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Scanner_Wifi_py" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Prescriptions -->
+        <article class="card project-card healthcare advanced" data-title="Prescriptions" data-desc="Medical prescriptions in PDF.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-user-nurse"></i> Prescriptions
+          </h3>
+          <p class="card__desc">Medical prescriptions in PDF.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Prescriptions" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- ThreatLens -->
+        <article class="card project-card django security advanced" data-title="ThreatLens" data-desc="File and URL analysis on Django.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved"></i> ThreatLens
+          </h3>
+          <p class="card__desc">File and URL analysis on Django.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/ThreatLens/tree/projects" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Webscanner -->
+        <article class="card project-card django security advanced" data-title="Webscanner" data-desc="Website check for SQL injections.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass"></i> Webscanner
+          </h3>
+          <p class="card__desc">Website check for SQL injections.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Webscanner" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- SNIPE -->
+        <article class="card project-card django security advanced" data-title="SNIPE (Scan Network)" data-desc="Network scanning and open port detection.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass"></i> SNIPE (Scan Network)
+          </h3>
+          <p class="card__desc">Network scanning and open port detection.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Webscanner" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- OSINT Platform -->
+        <article class="card project-card django security advanced" data-title="OSINT Platform" data-desc="Centralized OSINT information collection.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-user-secret"></i> OSINT Platform
+          </h3>
+          <p class="card__desc">Centralized OSINT information collection.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/OSINT-Platform" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- DevLog -->
+        <article class="card project-card django security advanced" data-title="DevLog" data-desc="Developer Blog Platform on Django.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-code"></i> DevLog
+          </h3>
+          <p class="card__desc">Developer Blog Platform on Django.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions">
+            <a href="https://github.com/CyberB0x/Devlog" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                      rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+          </div>
+        </article>
+
+        <!-- Phishing URL Analyzer -->
+        <article class="card project-card django security advanced" data-title="Phishing URL Analyzer" data-desc="Lightweight tool to detect potentially dangerous or phishing links.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-otter"></i> Phishing URL Analyzer
+          </h3>
+          <p class="card__desc">It's a lightweight, web-based tool that detects potentially dangerous or phishing links.</p>
+          <div class="card__badges">
+            <span class="badge badge--rose">Advanced</span>
+          </div>
+          <div class="card__actions flex gap-2">
+            <a href="https://github.com/CyberB0x/Phishing_url_analyzer"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                    bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                    rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                    transition-transform duration-200 ease-in-out">
+              GitHub →</a>
+            <a href="https://phishing-url-analyzer.onrender.com/" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400
+                      rounded-full shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              Live →
+            </a>
+          </div>
+        </article>
+
+        <!-- SafeSend -->
+        <article class="card project-card django security expert premium" data-title="SafeSend" data-desc="Secure one-time file transfer.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-file-import"></i> SafeSend
+          </h3>
+          <p class="card__desc">Secure one-time file transfer.</p>
+          <div class="card__badges">
+            <span class="badge badge--gray">Expert</span>
+            <span class="badge badge--teal">Premium</span>
+          </div>
+          <div class="card__actions">
+
+            <a href="https://github.com/CyberB0x/SafeSend" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                    bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                    rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                    transition-transform duration-200 ease-in-out">
+               GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- OneTimeLink (Buy) -->
+        <article class="card project-card django security expert premium" data-title="OneTimeLink" data-desc="Secure File & Message Sharing.">
+          <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-link"></i> OneTimeLink
+          </h3>
+          <p class="card__desc">Secure File &amp; Message Sharing.</p>
+          <div class="card__badges">
+            <span class="badge badge--gray">Expert</span>
+            <span class="badge badge--teal">Premium</span>
+          </div>
+          <div class="card__actions">
+
+            <a href="https://arslonbekefsun.gumroad.com/l/fwulq" target="_blank"
+               class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                      bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                      rounded-full shadow-sm hover:scale-105 hover:shadow-md
+                      transition-transform duration-200 ease-in-out">
+              $ Buy this →
+            </a>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty state -->
+      <div id="emptyState" class="hidden mt-10 rounded-2xl border border-dashed border-gray-300 bg-white p-10 text-center">
+        <div class="text-4xl mb-2">🧐</div>
+        <p class="font-semibold">No projects match your filters.</p>
+        <p class="text-gray-500 mt-1">Try clearing search or switching categories/difficulty.</p>
+      </div>
     </div>
+  </main>
 
-  </div>
-
-  <footer>
-    &copy; 2025 CyberB0x — Projects with soul.
+  <footer class="border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-center text-sm text-gray-600">
+      &copy; 2025 CyberB0x — Projects with soul.
+    </div>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Styles (utility components) -->
+  <style>
+    .chip {
+      @apply px-4 py-2 rounded-full text-sm font-medium bg-white/10 text-white/90 hover:bg-white/15 ring-1 ring-white/15 transition;
+    }
+    .chip--active { @apply bg-white text-gray-900 ring-1 ring-gray-200; }
+    .chip--blue   { @apply bg-brand-600/20 text-white hover:bg-brand-600/30; }
+    .chip--green  { @apply bg-emerald-500/20 text-white hover:bg-emerald-500/30; }
+    .chip--amber  { @apply bg-amber-500/20 text-white hover:bg-amber-500/30; }
+    .chip--rose   { @apply bg-rose-500/20 text-white hover:bg-rose-500/30; }
+    .chip--gray   { @apply bg-gray-700/40 text-white hover:bg-gray-700/50; }
+    .chip--teal   { @apply bg-teal-500/20 text-white hover:bg-teal-500/30; }
+
+    .card {
+      @apply bg-white rounded-2xl p-6 shadow-card ring-1 ring-black/5 hover:-translate-y-0.5 hover:shadow-xl transition;
+    }
+    .card__title { @apply text-xl font-semibold mb-2; }
+    .card__desc  { @apply text-gray-600; }
+    .card__badges { @apply mt-4 flex flex-wrap gap-2; }
+    .card__actions { @apply mt-5; }
+
+    .badge { @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ring-1; }
+    .badge--green { @apply bg-emerald-50 text-emerald-700 ring-emerald-200; }
+    .badge--amber { @apply bg-amber-50 text-amber-700 ring-amber-200; }
+    .badge--rose  { @apply bg-rose-50 text-rose-700 ring-rose-200; }
+    .badge--gray  { @apply bg-gray-100 text-gray-800 ring-gray-300; }
+    .badge--teal  { @apply bg-teal-50 text-teal-700 ring-teal-200; }
+
+    .btn-primary { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition; }
+    .btn-ghost   { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-800 transition; }
+    .btn-accent  { @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition; }
+  </style>
+
+  <!-- Filtering script (no external file needed) -->
+  <script>
+    const cards = Array.from(document.querySelectorAll('.project-card'));
+    const categoryButtons = document.querySelectorAll('#categoryMenu button');
+    const difficultyButtons = document.querySelectorAll('#difficultyMenu button');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearch = document.getElementById('clearSearch');
+    const emptyState = document.getElementById('emptyState');
+    const navAll = document.getElementById('navAll');
+    const navBuy = document.getElementById('navBuy');
+
+    let activeCategory = 'all';
+    let activeDifficulty = 'all';
+    let query = '';
+
+    function setActive(btns, valueAttr, value) {
+      btns.forEach(b => b.classList.remove('chip--active'));
+      const btn = Array.from(btns).find(b => b.dataset[valueAttr] === value);
+      if (btn) btn.classList.add('chip--active');
+    }
+
+    function applyFilters() {
+      let visible = 0;
+      const q = query.trim().toLowerCase();
+
+      cards.forEach(card => {
+        const matchCategory = activeCategory === 'all' || card.classList.contains(activeCategory);
+        const matchDifficulty = activeDifficulty === 'all' || card.classList.contains(activeDifficulty);
+        const text = (card.dataset.title + ' ' + card.dataset.desc).toLowerCase();
+        const matchQuery = !q || text.includes(q);
+
+        const show = matchCategory && matchDifficulty && matchQuery;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      emptyState.classList.toggle('hidden', visible !== 0);
+    }
+
+    // Category interactions
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        activeCategory = e.currentTarget.dataset.category;
+        setActive(categoryButtons, 'category', activeCategory);
+        applyFilters();
+        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Difficulty interactions
+    difficultyButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        activeDifficulty = e.currentTarget.dataset.difficulty;
+        setActive(difficultyButtons, 'difficulty', activeDifficulty);
+        applyFilters();
+        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Search interactions
+    searchInput.addEventListener('input', e => {
+      query = e.target.value;
+      applyFilters();
+    });
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      query = '';
+      applyFilters();
+    });
+
+    // Navbar quick actions
+    navAll.addEventListener('click', (e) => {
+      e.preventDefault();
+      activeCategory = 'all';
+      activeDifficulty = 'all';
+      setActive(categoryButtons, 'category', 'all');
+      setActive(difficultyButtons, 'difficulty', 'all');
+      searchInput.value = '';
+      query = '';
+      applyFilters();
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    navBuy.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Show premium items quickly
+      activeDifficulty = 'premium';
+      setActive(difficultyButtons, 'difficulty', 'premium');
+      applyFilters();
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Initial render
+    applyFilters();
+  </script>
 </body>
 </html>
