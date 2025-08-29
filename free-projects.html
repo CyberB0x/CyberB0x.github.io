@@ -5,51 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Free Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Иконка для карточки (пример) */
+    .icon-project {
+      width: 48px;
+      height: 48px;
+      stroke: #6366f1; /* indigo-500 */
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-6 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-indigo-600">My Free Projects</h1>
-      <nav>
-        <a href="#" class="text-gray-600 hover:text-indigo-600 mx-3 font-medium">Home</a>
-        <a href="#" class="text-gray-600 hover:text-indigo-600 mx-3 font-medium">About</a>
-        <a href="#" class="text-gray-600 hover:text-indigo-600 mx-3 font-medium">Contact</a>
-      </nav>
+  <header class="bg-white shadow py-12">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl font-extrabold text-indigo-600 mb-2">My Free Projects</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Discover my collection of free projects, crafted with care and ready to use.</p>
     </div>
   </header>
 
-  <main class="container mx-auto px-6 py-10">
-    <h2 class="text-2xl font-semibold mb-8 text-gray-800">Explore My Free Projects</h2>
+  <main class="container mx-auto px-6 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <!-- Project Card -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="rounded-t-lg w-full h-48 object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project One</h3>
-          <p class="text-gray-600 mb-4">A brief description of project one. Clean, efficient, and free to use.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">View Details</a>
+      <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
+        <div class="flex items-center space-x-4 mb-6">
+          <!-- SVG Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20v-6"></path>
+            <path d="M12 4v4"></path>
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
+          <h3 class="text-2xl font-semibold text-gray-800">Project One</h3>
         </div>
+        <p class="text-gray-600 flex-grow mb-6">A brief description of project one. Clean, efficient, and free to use.</p>
+        <a href="#" class="mt-auto inline-block text-center bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">View Details</a>
       </div>
 
-      <!-- Repeat similar cards -->
-      <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="rounded-t-lg w-full h-48 object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Project Two</h3>
-          <p class="text-gray-600 mb-4">An awesome project with modern features and open-source code.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">View Details</a>
+      <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
+        <div class="flex items-center space-x-4 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z"></path>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold text-gray-800">Project Two</h3>
         </div>
+        <p class="text-gray-600 flex-grow mb-6">An awesome project with modern features and open-source code.</p>
+        <a href="#" class="mt-auto inline-block text-center bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">View Details</a>
       </div>
 
-      <!-- Add more cards as needed -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
+        <div class="flex items-center space-x-4 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold text-gray-800">Project Three</h3>
+        </div>
+        <p class="text-gray-600 flex-grow mb-6">A creative project demonstrating responsive design and functionality.</p>
+        <a href="#" class="mt-auto inline-block text-center bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">View Details</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
+        <div class="flex items-center space-x-4 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h18"></path>
+            <path d="M12 3v18"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold text-gray-800">Project Four</h3>
+        </div>
+        <p class="text-gray-600 flex-grow mb-6">Free and open-source tool built for developers and designers.</p>
+        <a href="#" class="mt-auto inline-block text-center bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">View Details</a>
+      </div>
 
     </div>
   </main>
 
-  <footer class="bg-white border-t mt-12 py-6">
-    <div class="container mx-auto px-6 text-center text-gray-600">
+  <footer class="bg-white border-t py-8 mt-16">
+    <div class="container mx-auto px-6 text-center text-gray-600 text-sm">
       &copy; 2025 My Free Projects. All rights reserved.
     </div>
   </footer>
