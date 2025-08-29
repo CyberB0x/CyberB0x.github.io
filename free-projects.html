@@ -79,112 +79,276 @@
     </section>
 
     <!-- PROJECT CARDS -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10" id="projects-container">
+    <section class="projects-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Example project card - Beginner -->
-      <article
-        class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
-        data-level="beginner"
-        data-title="Telegram Bot"
-      >
-        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Robot -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m-2 8h.01M12 14v6m4-4h-8a2 2 0 010-4h8a2 2 0 010 4z" />
-          </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Telegram Bot</h3>
-        </div>
-        <p class="text-gray-600 flex-grow mb-6">Smart bot with API and custom features.</p>
-        <div class="mb-4">
-          <span class="badge badge--green">Beginner</span>
-        </div>
-        <a href="https://github.com/CyberB0x/Project_Telegram_bot" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
-          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
-          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
-          transition-all duration-300 hover:scale-105 hover:shadow-lg">
-          GitHub →
-        </a>
-      </article>
+  <!-- Telegram Bot -->
+  <article class="card project-card python telegram beginner" data-title="Telegram Bot" data-desc="Smart bot with API and custom features.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-robot"></i>Telegram Bot
+    </h3>
+    <p class="card__desc">Smart bot with API and custom features.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Project_Telegram_bot" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
 
-      <!-- Example project card - Intermediate -->
-      <article
-        class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
-        data-level="intermediate"
-        data-title="Data Analyzer"
-      >
-        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Chart Bar -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M18 17V9m-6 8v-6m-6 4v-2" />
-          </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Data Analyzer</h3>
-        </div>
-        <p class="text-gray-600 flex-grow mb-6">Analyze and visualize datasets efficiently.</p>
-        <div class="mb-4">
-          <span class="badge badge--yellow">Intermediate</span>
-        </div>
-        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
-          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
-          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
-          transition-all duration-300 hover:scale-105 hover:shadow-lg">
-          GitHub →
-        </a>
-      </article>
+  <!-- HelpDesk-system -->
+  <article class="card project-card python sql django intermediate" data-title="HelpDesk-system" data-desc="User support system on Django.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-handshake-angle"></i> HelpDesk-system
+    </h3>
+    <p class="card__desc">User support system on Django.</p>
+    <div class="card__badges">
+      <span class="badge badge--amber">Intermediate</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/HelpDesk-system" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
 
-      <!-- Example project card - Advanced -->
-      <article
-        class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
-        data-level="advanced"
-        data-title="Web Scraper"
-      >
-        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Code -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 6l-6 6 6 6" />
-          </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Web Scraper</h3>
-        </div>
-        <p class="text-gray-600 flex-grow mb-6">Advanced scraping and data extraction techniques.</p>
-        <div class="mb-4">
-          <span class="badge badge--red">Advanced</span>
-        </div>
-        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
-          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
-          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
-          transition-all duration-300 hover:scale-105 hover:shadow-lg">
-          GitHub →
-        </a>
-      </article>
+  <!-- SQL User Manager -->
+  <article class="card project-card python sql beginner" data-title="SQL User Manager" data-desc="User management with MySQL.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-database"></i> SQL User Manager
+    </h3>
+    <p class="card__desc">User management with MySQL.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/ArslonDev/SQL_py" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
 
-      <!-- Example project card - Expert -->
-      <article
-        class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
-        data-level="expert"
-        data-title="Quantum Simulator"
-      >
-        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Atom -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20m10-10H2" />
-          </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Quantum Simulator</h3>
-        </div>
-        <p class="text-gray-600 flex-grow mb-6">Cutting-edge simulation of quantum circuits and algorithms.</p>
-        <div class="mb-4">
-          <span class="badge badge--purple">Expert</span>
-        </div>
-        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
-          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
-          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
-          transition-all duration-300 hover:scale-105 hover:shadow-lg">
-          GitHub →
-        </a>
-      </article>
+  <!-- To-Do-List-Manager -->
+  <article class="card project-card python sql beginner" data-title="To-Do-List-Manager" data-desc="Task management with MySQL and Python.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-clipboard-list"></i> To-Do-List-Manager
+    </h3>
+    <p class="card__desc">Task management with MySQL and Python.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/To-Do-List-Manager" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
 
-    </section>
+  <!-- MiniCRM -->
+  <article class="card project-card python sql intermediate" data-title="MiniCRM" data-desc="Client and task management.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-headset"></i> MiniCRM
+    </h3>
+    <p class="card__desc">Client and task management.</p>
+    <div class="card__badges">
+      <span class="badge badge--amber">Intermediate</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Mini-CRM/tree/projects" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- TextExtractor -->
+  <article class="card project-card python image beginner" data-title="TextExtractor" data-desc="Text extraction from images (OCR).">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-images"></i> TextExtractor
+    </h3>
+    <p class="card__desc">Text extraction from images (OCR).</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/TextExtractor" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- QR Code Generator from Text/Links -->
+  <article class="card project-card python image beginner" data-title="QR Code Generator" data-desc="Flask web service that generates QR codes from text or URLs.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-qrcode"></i> QR Code Generator from Text/Links
+    </h3>
+    <p class="card__desc">A simple Flask web service that generates QR codes from text or URLs.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/QR_Code" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Converter IMG to JPG -->
+  <article class="card project-card python image beginner" data-title="Converter IMG to JPG" data-desc="Image converter with Flask + PIL.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-camera-rotate"></i> Converter IMG to JPG
+    </h3>
+    <p class="card__desc">Image converter with Flask + PIL.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/IMG_convertor" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Image Uploader -->
+  <article class="card project-card python image intermediate" data-title="Image Uploader" data-desc="Image upload interface with Flask + Docker.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-camera"></i> Image Uploader
+    </h3>
+    <p class="card__desc">Image upload interface with Flask + Docker.</p>
+    <div class="card__badges">
+      <span class="badge badge--amber">Intermediate</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Project_Image_Uploader" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- My AdBlocker -->
+  <article class="card project-card extension beginner" data-title="My AdBlocker" data-desc="Chrome extension on Manifest V3.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-ban"></i> My AdBlocker
+    </h3>
+    <p class="card__desc">Chrome extension on Manifest V3.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/AdBlocker_Lite" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Wi-Fi Scanner in Python -->
+  <article class="card project-card wifi python beginner" data-title="Wi-Fi Scanner in Python" data-desc="Wi-Fi network scanner with pywifi.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-wifi"></i> Wi-Fi Scanner in Python
+    </h3>
+    <p class="card__desc">Wi-Fi network scanner with pywifi.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Wi-Fi_Scanner" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Penetration Testing -->
+  <article class="card project-card python pentest intermediate" data-title="Penetration Testing" data-desc="Pentesting tools in Python.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-shield-halved"></i> Penetration Testing
+    </h3>
+    <p class="card__desc">Pentesting tools in Python.</p>
+    <div class="card__badges">
+      <span class="badge badge--amber">Intermediate</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Pentest-Python" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Easy-SSH -->
+  <article class="card project-card python ssh intermediate" data-title="Easy-SSH" data-desc="SSH management with paramiko.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-terminal"></i> Easy-SSH
+    </h3>
+    <p class="card__desc">SSH management with paramiko.</p>
+    <div class="card__badges">
+      <span class="badge badge--amber">Intermediate</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Easy-SSH" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+  <!-- Simple-Port-Scanner -->
+  <article class="card project-card python scanner beginner" data-title="Simple-Port-Scanner" data-desc="Port scanning tool in Python.">
+    <h3 class="card__title text-base font-semibold text-gray-900 bg-gray-50 px-2 py-1 rounded-md shadow-sm flex items-center gap-2">
+      <i class="fa-solid fa-network-wired"></i> Simple-Port-Scanner
+    </h3>
+    <p class="card__desc">Port scanning tool in Python.</p>
+    <div class="card__badges">
+      <span class="badge badge--green">Beginner</span>
+    </div>
+    <div class="card__actions">
+      <a href="https://github.com/CyberB0x/Simple-Port-Scanner" target="_blank"
+         class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white
+                bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400
+                rounded-md shadow-sm hover:scale-105 hover:shadow-md
+                transition-transform duration-200 ease-in-out">
+        GitHub →</a>
+    </div>
+  </article>
+
+</section>
+
 
   </main>
 
