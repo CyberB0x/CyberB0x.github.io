@@ -18,6 +18,9 @@
     .badge--red {
       @apply bg-red-200 text-red-800;
     }
+    .badge--purple {
+      @apply bg-purple-200 text-purple-800;
+    }
   </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
@@ -47,16 +50,38 @@
     <section class="mb-12 text-center">
       <h2 class="text-2xl font-semibold mb-4">Filter by Level</h2>
       <div class="inline-flex flex-wrap justify-center gap-4">
-        <button data-filter="all" class="filter-btn bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-indigo-700 transition">All</button>
-        <button data-filter="beginner" class="filter-btn bg-green-200 text-green-800 px-5 py-2 rounded-full font-semibold shadow hover:bg-green-300 transition">Beginner</button>
-        <button data-filter="intermediate" class="filter-btn bg-yellow-200 text-yellow-800 px-5 py-2 rounded-full font-semibold shadow hover:bg-yellow-300 transition">Intermediate</button>
-        <button data-filter="advanced" class="filter-btn bg-red-200 text-red-800 px-5 py-2 rounded-full font-semibold shadow hover:bg-red-300 transition">Advanced</button>
+        <button data-filter="all" class="filter-btn px-5 py-2 rounded-full font-semibold shadow
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white
+          hover:from-purple-600 hover:via-purple-500 hover:to-purple-400 transition-all duration-300">
+          All
+        </button>
+        <button data-filter="beginner" class="filter-btn px-5 py-2 rounded-full font-semibold shadow
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white
+          hover:from-purple-600 hover:via-purple-500 hover:to-purple-400 transition-all duration-300">
+          Beginner
+        </button>
+        <button data-filter="intermediate" class="filter-btn px-5 py-2 rounded-full font-semibold shadow
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white
+          hover:from-purple-600 hover:via-purple-500 hover:to-purple-400 transition-all duration-300">
+          Intermediate
+        </button>
+        <button data-filter="advanced" class="filter-btn px-5 py-2 rounded-full font-semibold shadow
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white
+          hover:from-purple-600 hover:via-purple-500 hover:to-purple-400 transition-all duration-300">
+          Advanced
+        </button>
+        <button data-filter="expert" class="filter-btn px-5 py-2 rounded-full font-semibold shadow
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white
+          hover:from-purple-600 hover:via-purple-500 hover:to-purple-400 transition-all duration-300">
+          Expert
+        </button>
       </div>
     </section>
 
     <!-- PROJECT CARDS -->
     <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10" id="projects-container">
 
+      <!-- Example project card - Beginner -->
       <article
         class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
         data-level="beginner"
@@ -65,7 +90,7 @@
         <div class="flex items-center space-x-4 mb-6 text-indigo-600">
           <!-- Heroicon Robot -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m-1 4h2m-4 8h6m-6-4h6m1-8a1 1 0 011 1v3a1 1 0 01-1 1H7a1 1 0 01-1-1V7a1 1 0 011-1h6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m-2 8h.01M12 14v6m4-4h-8a2 2 0 010-4h8a2 2 0 010 4z" />
           </svg>
           <h3 class="text-2xl font-semibold text-gray-800">Telegram Bot</h3>
         </div>
@@ -73,76 +98,88 @@
         <div class="mb-4">
           <span class="badge badge--green">Beginner</span>
         </div>
-        <a href="https://github.com/CyberB0x/Project_Telegram_bot" target="_blank"
-           class="inline-flex items-center px-6 py-3 text-white bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 rounded-xl font-semibold shadow hover:scale-105 hover:shadow-md transition-transform duration-200 ease-in-out">
+        <a href="https://github.com/CyberB0x/Project_Telegram_bot" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
+          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
+          transition-all duration-300 hover:scale-105 hover:shadow-lg">
           GitHub →
         </a>
       </article>
 
+      <!-- Example project card - Intermediate -->
       <article
         class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
         data-level="intermediate"
-        data-title="Data Visualizer"
+        data-title="Data Analyzer"
       >
         <div class="flex items-center space-x-4 mb-6 text-indigo-600">
           <!-- Heroicon Chart Bar -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V9" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 17V5" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17v-3" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 17V9m-6 8v-6m-6 4v-2" />
           </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Data Visualizer</h3>
+          <h3 class="text-2xl font-semibold text-gray-800">Data Analyzer</h3>
         </div>
-        <p class="text-gray-600 flex-grow mb-6">Interactive charts and data insights.</p>
+        <p class="text-gray-600 flex-grow mb-6">Analyze and visualize datasets efficiently.</p>
         <div class="mb-4">
           <span class="badge badge--yellow">Intermediate</span>
         </div>
-        <a href="#" class="inline-flex items-center px-6 py-3 text-white bg-indigo-600 rounded-xl font-semibold shadow hover:bg-indigo-700 transition">
+        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
+          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
+          transition-all duration-300 hover:scale-105 hover:shadow-lg">
           GitHub →
         </a>
       </article>
 
+      <!-- Example project card - Advanced -->
       <article
         class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
         data-level="advanced"
-        data-title="AI Chatbot"
+        data-title="Web Scraper"
       >
         <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Chat -->
+          <!-- Heroicon Code -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 5-9 9-9 9s-9-4-9-9 4-9 9-9 9 4 9 9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 6l-6 6 6 6" />
           </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">AI Chatbot</h3>
+          <h3 class="text-2xl font-semibold text-gray-800">Web Scraper</h3>
         </div>
-        <p class="text-gray-600 flex-grow mb-6">Advanced NLP chatbot with machine learning.</p>
+        <p class="text-gray-600 flex-grow mb-6">Advanced scraping and data extraction techniques.</p>
         <div class="mb-4">
           <span class="badge badge--red">Advanced</span>
         </div>
-        <a href="#" class="inline-flex items-center px-6 py-3 text-white bg-indigo-600 rounded-xl font-semibold shadow hover:bg-indigo-700 transition">
+        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
+          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
+          transition-all duration-300 hover:scale-105 hover:shadow-lg">
           GitHub →
         </a>
       </article>
 
+      <!-- Example project card - Expert -->
       <article
         class="project-card bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300"
-        data-level="beginner"
-        data-title="Web Scraper"
+        data-level="expert"
+        data-title="Quantum Simulator"
       >
         <div class="flex items-center space-x-4 mb-6 text-indigo-600">
-          <!-- Heroicon Cube -->
+          <!-- Heroicon Atom -->
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M20 7V4a2 2 0 00-2-2H6a2 2 0 00-2 2v3" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 21v-4H7v4a2 2 0 002 2h4a2 2 0 002-2v-4h-2v4" />
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20m10-10H2" />
           </svg>
-          <h3 class="text-2xl font-semibold text-gray-800">Web Scraper</h3>
+          <h3 class="text-2xl font-semibold text-gray-800">Quantum Simulator</h3>
         </div>
-        <p class="text-gray-600 flex-grow mb-6">Beginner-friendly scraper to extract web data.</p>
+        <p class="text-gray-600 flex-grow mb-6">Cutting-edge simulation of quantum circuits and algorithms.</p>
         <div class="mb-4">
-          <span class="badge badge--green">Beginner</span>
+          <span class="badge badge--purple">Expert</span>
         </div>
-        <a href="#" class="inline-flex items-center px-6 py-3 text-white bg-indigo-600 rounded-xl font-semibold shadow hover:bg-indigo-700 transition">
+        <a href="#" target="_blank" class="inline-flex items-center px-6 py-3 text-white 
+          bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500
+          rounded-xl font-semibold shadow hover:from-purple-600 hover:via-purple-500 hover:to-purple-400
+          transition-all duration-300 hover:scale-105 hover:shadow-lg">
           GitHub →
         </a>
       </article>
@@ -158,7 +195,6 @@
   </footer>
 
   <script>
-    // Фильтр по уровню сложности
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project-card');
 
@@ -166,9 +202,8 @@
       btn.addEventListener('click', () => {
         const filter = btn.getAttribute('data-filter');
 
-        // Снять активность со всех кнопок
-        filterButtons.forEach(b => b.classList.remove('opacity-70'));
-        btn.classList.add('opacity-70');
+        filterButtons.forEach(b => b.classList.remove('opacity-80'));
+        btn.classList.add('opacity-80');
 
         projects.forEach(project => {
           if (filter === 'all' || project.dataset.level === filter) {
@@ -180,7 +215,7 @@
       });
     });
 
-    // По умолчанию активна кнопка All
+    // Set default active filter button
     document.querySelector('.filter-btn[data-filter="all"]').click();
   </script>
 
