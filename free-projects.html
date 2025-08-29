@@ -5,35 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Free Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Иконка для карточки (пример) */
-    .icon-project {
-      width: 48px;
-      height: 48px;
-      stroke: #6366f1; /* indigo-500 */
-    }
-  </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
   <header class="bg-white shadow py-12">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-5xl font-extrabold text-indigo-600 mb-2">My Free Projects</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Discover my collection of free projects, crafted with care and ready to use.</p>
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <h1 class="text-5xl font-extrabold text-indigo-600 mb-4">My Free Projects</h1>
+      <p class="text-gray-600 text-lg mb-6">Discover my collection of free projects, crafted with care and ready to use.</p>
+      <button
+        onclick="history.back()"
+        class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition"
+        aria-label="Go back"
+      >
+        <!-- Heroicon: Arrow Left -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back
+      </button>
     </div>
   </header>
 
-  <main class="container mx-auto px-6 py-14">
+  <main class="container mx-auto px-6 py-14 max-w-7xl">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
       <!-- Project Card -->
       <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
-        <div class="flex items-center space-x-4 mb-6">
-          <!-- SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 20v-6"></path>
-            <path d="M12 4v4"></path>
-            <circle cx="12" cy="12" r="10"></circle>
+        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
+          <!-- Heroicon: Code Brackets -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 6l-6 6 6 6" />
           </svg>
           <h3 class="text-2xl font-semibold text-gray-800">Project One</h3>
         </div>
@@ -42,11 +44,11 @@
       </div>
 
       <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
-        <div class="flex items-center space-x-4 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16v16H4z"></path>
-            <path d="M8 12h8"></path>
-            <path d="M12 8v8"></path>
+        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
+          <!-- Heroicon: Terminal -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 15h3" />
           </svg>
           <h3 class="text-2xl font-semibold text-gray-800">Project Two</h3>
         </div>
@@ -55,10 +57,12 @@
       </div>
 
       <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
-        <div class="flex items-center space-x-4 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 6v6l4 2"></path>
+        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
+          <!-- Heroicon: Puzzle -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l3 3m0-6l-3 3" />
           </svg>
           <h3 class="text-2xl font-semibold text-gray-800">Project Three</h3>
         </div>
@@ -67,10 +71,10 @@
       </div>
 
       <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between hover:shadow-indigo-400/40 transition-shadow duration-300">
-        <div class="flex items-center space-x-4 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="icon-project" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 12h18"></path>
-            <path d="M12 3v18"></path>
+        <div class="flex items-center space-x-4 mb-6 text-indigo-600">
+          <!-- Heroicon: Sparkles -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.364-7.364l-2.121 2.121M7.757 16.243l-2.121 2.121m12.728 0l-2.121-2.121M7.757 7.757l-2.121-2.121" />
           </svg>
           <h3 class="text-2xl font-semibold text-gray-800">Project Four</h3>
         </div>
